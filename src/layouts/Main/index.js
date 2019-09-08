@@ -4,22 +4,22 @@ import './styles.css'
 const Main = (props) => {
   return (
     <div className="container">
-      <div className="nav">
-        <div className="container-2">
-          <h1>Title</h1>
-          <button>Clickeame!</button>
+      <div className="toolbar">
+        <div className="text-container">
+          <span className="title">TogeHERapp</span>
+          <span className="sub-title">Crear y administrar usuarios</span>
+        </div>
+        <button className="button">+ Crear usuario</button>
+      </div>
+      <div className="list-container">
+        <span className="list-title">ALERTAS</span>
+        <div className="list-content">
+          {props.children}
         </div>
       </div>
-      <div className="nav">
-        <div className="container-2">
-          <h5>Subtitle</h5>
-        </div>
-      </div>
-
-
-      {props.children}
     </div>
   )
+
 }
 
 export default Main;
