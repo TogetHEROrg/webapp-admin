@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./App.css";
+
+import axios from 'axios';
 
 // Layouts
 import Main from './layouts/Main';
@@ -8,11 +10,23 @@ import Main from './layouts/Main';
 import CardAlert from './components/CardAlert'
 
 const App = () => {
+  const [alertsData, setAlertsData] = useState(null);
+
+  useEffect(() => {
+    handleGetAlerts();
+  }, [])
+
+  const handleGetAlerts = () => {
+    axios.get('http://localhost:3001/alertas').then(res => {
+      setAlertsData(res.data)
+    })
+  }
+
   return <div className="main">
     <Main>
       {
-        [1, 2, 3, 4, 5, 6, 7, 8, 9].map(alert => <CardAlert />) 
-      } 
+        alertsData && alertsData.map(alert => <CardAlert data={alert} />)
+      }
     </Main>
   </div>
 }
