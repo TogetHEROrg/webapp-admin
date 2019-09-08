@@ -15,10 +15,3 @@ const CardAlert = (props) => {
 }
 
 export default CardAlert;
-
-
-/*
-<div className="right-content">
-  <span>{props.data.Descripcion}</span>
-  <span>{new Date(props.data.Fecha)}</span>
-</div> */
