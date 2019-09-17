@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import 
 
 const Main = (props) => {
   return (
@@ -10,7 +11,7 @@ const Main = (props) => {
           <span className="sub-title">Crear y administrar usuarios</span>
         </div>
         <div className="button">
-          <a   id="button">+ Crear usuarios</a>
+          <a href="/" id="button">+ Crear usuarios</a>
         </div>
        </div>
       <div className="list-container">
