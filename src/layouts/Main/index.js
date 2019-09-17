@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.css';
 
 
-const link 
 const Main = (props) => {
   return (
     <div className="container">
