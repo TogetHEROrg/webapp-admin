@@ -9,8 +9,10 @@ const Main = (props) => {
           <span className="title">TogeHERapp</span>
           <span className="sub-title">Crear y administrar usuarios</span>
         </div>
-        <button className="button">+ Crear usuario</button>
-      </div>
+        <div className="button">
+          <a   id="button">+ Crear usuarios</a>
+        </div>
+       </div>
       <div className="list-container">
         <span className="list-title">ALERTAS</span>
         <div className="list-content">
