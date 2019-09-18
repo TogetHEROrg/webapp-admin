@@ -1,5 +1,8 @@
 .form-container {
-    width: 350px;
-    height: 450px;
-    background-color: aquamarine;
+    position: absolute;
+    height: 200px;
+    top:40%;
+    z-index: 20;
+    padding: 20px;
+    font-weight: bold;
 }

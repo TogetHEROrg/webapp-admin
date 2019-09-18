@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "./App.css";
 
+// Formulario
+import Formulario from './Formulario';
+
 import axios from 'axios';
 
 // Layouts
@@ -23,6 +26,7 @@ const App = () => {
   }
 
   return <div className="main">
+  <Formulario/>
     <Main>
       {
         alertsData && alertsData.map(alert => <CardAlert data={alert} />)
