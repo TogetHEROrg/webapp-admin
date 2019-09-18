@@ -1,48 +1,65 @@
 .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  max-width: 800px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
 }
+
+.imagen-fondo::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url("D:\webapp-admin\src\img\fondo.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    margin-left: 12%;
+}
+
 .toolbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 .text-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .title {
-color: black;
-font-size: 31px;
-
+    color: black;
+    font-size: 31px;
 }
+
 .sub-title {
-margin-top: 12px;
-color: #939BA3;
-font-size: 12px;
+    margin-top: 12px;
+    color: #939BA3;
+    font-size: 12px;
 }
+
 .button {
-  background-color: #B3A920;
-  border-radius: 25px;
-  height: 41px;
-  padding: 15px 10px 0px;
+    background-color: #B3A920;
+    border-radius: 25px;
+    height: 41px;
+    padding: 15px 10px 0px;
 }
+
 .button a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
+
 .list-container {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
-.list-title {
-  color: #525151;
-  font-size: 31px;
-  font-weight: 500;
 
+.list-title {
+    color: #525151;
+    font-size: 31px;
+    font-weight: 500;
 }
