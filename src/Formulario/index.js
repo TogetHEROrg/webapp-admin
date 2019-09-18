@@ -1,11 +1,18 @@
-import React from 'react'
+import React, {Component} from 'react';
 import './styles.css'
+import M from "materialize-css";
+import 'materialize-css/dist/css/materialize.min.css';
 
 
 export default class Formulario extends React.Component{
+
+  componentDidMount() {
+    // Auto initialize all the things!
+    M.AutoInit();
+}
     state ={
-        name:"",
-        last_name:"",
+        nombre:"",
+        apellido:"",
         dni:"",
         direccion:"",
         email:""
@@ -15,7 +22,7 @@ render(){
     return(
 
 <div className="row">
-<div className={`form-container scale-transition scale-out ${this.props.visible ? "scale-in":""} col s4 offset-s4 z-depth-4 cyan lighten-3`}>
+  <div className="form-container col s4 offset-s4 z-depth-4 cyan lighten-3 hoverable">
     <form className="col s12">
       <div className="row">
         <div className="input-field col s6">
