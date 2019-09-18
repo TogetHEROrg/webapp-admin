@@ -19,13 +19,13 @@ render(){
     <form className="col s12">
       <div className="row">
         <div className="input-field col s6">
-          <input placeholder="Nombre" id="first_name" type="text" className="validate"/>
-          <label htmlFor="name">Nombre:</label>
+          <input placeholder="Nombre" id="nombre" type="text" className="validate"/>
+          <label htmlFor="nombre">Nombre:</label>
         </div>
 
         <div className="input-field col s6">
-          <input placeholder="Apellido" id="last_name" type="text" className="validate"/>
-          <label htmlFor="last_name">Apellido:</label>
+          <input placeholder="Apellido" id="apellido" type="text" className="validate"/>
+          <label htmlFor="apellido">Apellido:</label>
         </div>
       </div>
       <div className="row">
@@ -48,11 +48,9 @@ render(){
       <div class="input-field col s12">
     <select>
       <option value="" disabled selected>Elige una opcion:</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value="1">Administrador</option>
+      <option value="2">Usuario</option>
     </select>
-    <label>Materialize Select</label>
   </div>
       <input type="button" className="btn" onClick={this.onSubmit} value="Agregar"/>
         <input type="button" className="btn" onClick={()=>this.props.onCerrar()} value="Cerrar"/>
