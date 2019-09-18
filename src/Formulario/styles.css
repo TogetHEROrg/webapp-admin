@@ -1,5 +1,6 @@
 .form-container {
     position: absolute;
+    width: 700px;
     height: 200px;
     top:50%;
     z-index: 20;
