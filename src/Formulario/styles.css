@@ -1,8 +1,9 @@
 .form-container {
     position: absolute;
     height: 200px;
-    top:40%;
+    top:50%;
     z-index: 20;
     padding: 20px;
     font-weight: bold;
+    background-color: cyan;
 }
