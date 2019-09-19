@@ -26,7 +26,7 @@ export default class Formulario extends React.Component {
 
       <div className="row">
         <div className="form-container col s10 lime lighten-3">
-          <form className="centrar-form col s12 hoverable">
+          <form className="col s12 hoverable">
             <div className="row">
               <div className="input-field col s6">
                 <i className="material-icons prefix">account_circle</i>
@@ -100,10 +100,6 @@ export default class Formulario extends React.Component {
               </button>
               </div>
             </div>
-
-
-
-
           </form>
         </div>
       </div>
