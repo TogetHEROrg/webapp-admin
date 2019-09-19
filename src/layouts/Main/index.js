@@ -7,10 +7,10 @@ const Main = (props) => {
      <div className="container imagen-fondo">
       <div className="toolbar">
         <div className="text-container">
-          <span className="title">TogeHERapp</span>
+          <span className="title">TogetHERapp</span>
           <span className="sub-title">Crear y administrar usuarios</span>
         </div>
-        <div className="button">
+        <div className="button btn">
           <a href="/" id="button">+ Crear usuarios</a>
         </div>
        </div>

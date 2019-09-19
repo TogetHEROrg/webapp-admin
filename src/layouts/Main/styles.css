@@ -10,7 +10,7 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     background-image: url("D:\webapp-admin\src\img\fondo.svg");
     background-repeat: no-repeat;
