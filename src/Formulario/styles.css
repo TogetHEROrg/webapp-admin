@@ -1,15 +1,19 @@
 .form-container {
     position: absolute;
-    height: 500px;
-    top: 22%;
+    height: 460px;
+    top: 20%;
     z-index: 20;
     padding: 20px;
     font-weight: bold;
 }
-.botones-posicion button {
+.btn-check-posicion button {
     background-color: #B3A920;
     border-radius: 20px;
 }
 .row .col {
-    margin-top: 20px;
+    margin-top: 15px;
+}
+.btn-check-posicion{
+    display: flex;
+    justify-content: space-around;
 }

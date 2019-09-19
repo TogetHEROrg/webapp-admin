@@ -9,8 +9,9 @@ export default class Formulario extends React.Component {
   componentDidMount() {
     // Auto initialize all the things!
     M.AutoInit();
+   
   }
-
+  
 
   state = {
     nombre: "",
@@ -30,40 +31,41 @@ export default class Formulario extends React.Component {
             <div className="row">
               <div className="input-field col s6">
                 <i className="material-icons prefix">account_circle</i>
-                <input placeholder="Nombre" id="nombre" type="text" className="validate" />
+                <input id="nombre" type="text" maxLength="25" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="nombre">Nombre:</label>
               </div>
 
               <div className="input-field col s6">
                 <i className="material-icons prefix">account_box</i>
-                <input placeholder="Apellido" id="apellido" type="text" className="validate" />
+                <input id="apellido" type="text" maxLength="25" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="apellido">Apellido:</label>
               </div>
             </div>
             <div className="row">
               <div className="input-field col s6">
                 <i className="material-icons prefix">recent_actors</i>
-                <input placeholder="DNI" id="dni" type="text" className="validate" />
+                <input id="dni" type="text" maxLength="8" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="dni">D.N.I:</label>
               </div>
 
               <div className="input-field col s6">
                 <i className="material-icons prefix">location_on</i>
-                <input placeholder="Direccion" id="direccion" type="text" className="validate" />
+                <input id="direccion" type="text" maxLength="45" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="direccion">Direccion:</label>
               </div>
             </div>
             <div className="row">
               <div className="input-field col s6">
                 <i className="material-icons prefix">email</i>
-                <input placeholder="Email" id="email" type="email" className="validate" />
+                <input id="email" type="email" maxLength="40" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="email">Email</label>
-                <span class="helper-text" data-error="Error" data-success="Correcto">Ayuda</span>
+                <span className="helper-text" data-error="Error" data-success="Correcto"></span>
               </div>
               <div className="input-field col s6">
                 <i className="material-icons prefix">phone</i>
-                <input placeholder="Telefono" id="telefono" type="text" className="validate" />
+                <input id="telefono" type="tel" maxLength="30" className="validate"/>
                 <label className="blue-text text-darken-2" htmlFor="telefono">Telefono:</label>
+                <span className="helper-text" data-error="Error" data-success="Correcto"></span>
               </div>
             </div>
             <div className="row">
@@ -76,7 +78,7 @@ export default class Formulario extends React.Component {
                 </select>
               </div>
 
-              <div className="input-field col s4">
+              <div className="btn-check-posicion input-field col s4">
                 <span>
                   <label>
                     <input name="group1" type="radio" checked />
@@ -91,11 +93,11 @@ export default class Formulario extends React.Component {
                 </span>
               </div>
 
-              <div className="botones-posicion col s4">
+              <div className="btn-check-posicion col s4">
               <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
               <i className="material-icons right">send</i>
               </button>
-              <button className="btn waves-effect waves-light" onClick={() => this.props.onCerrar()} value="Cerrar" type="button" name="action">Cerrar
+              <button className="btn waves-effect waves-light" onClick={() => this.props.onCerrar()} value="Cerrar" name="action">Cerrar
               <i className="material-icons right">close</i>
               </button>
               </div>
