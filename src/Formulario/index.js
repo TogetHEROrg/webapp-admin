@@ -70,7 +70,7 @@ export default class Formulario extends React.Component {
               <div className="input-field col s4">
                 <i className="material-icons prefix">group</i>
                 <select>
-                  <option value="" disabled selected>Elige una opcion:</option>
+                  <option value="" disabled selected>Elige una organizacion:</option>
                   <option value="1">Defensoras Ambientales</option>
                   <option value="2">Otras</option>
                 </select>
@@ -92,8 +92,12 @@ export default class Formulario extends React.Component {
               </div>
 
               <div className="botones-posicion col s4">
-                <input type="button" className="btn" onClick={this.onSubmit} value="Agregar" />
-                <input type="button" className="btn" onClick={() => this.props.onCerrar()} value="Cerrar" />
+              <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
+              <i className="material-icons right">send</i>
+              </button>
+              <button className="btn waves-effect waves-light" onClick={() => this.props.onCerrar()} value="Cerrar" type="button" name="action">Cerrar
+              <i className="material-icons right">close</i>
+              </button>
               </div>
             </div>
 

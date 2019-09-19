@@ -4,16 +4,19 @@ import './styles.css';
 
 const Main = (props) => {
   return (
-     <div className="container imagen-fondo">
+    <div className="container imagen-fondo">
       <div className="toolbar">
         <div className="text-container">
           <span className="title">TogetHERapp</span>
           <span className="sub-title">Crear y administrar usuarios</span>
         </div>
-        <div className="button btn">
-          <a href="/" id="button">+ Crear usuarios</a>
+        <div>
+          <button className="button btn waves-effect waves-light" value="Crear" type="button" name="action">Crear Usuario
+              <i className="material-icons right">add</i>
+          </button>
+
         </div>
-       </div>
+      </div>
       <div className="list-container">
         <span className="list-title">ALERTAS</span>
         <div className="list-content">

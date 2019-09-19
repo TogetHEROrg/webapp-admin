@@ -43,13 +43,6 @@
 .button {
     background-color: #B3A920;
     border-radius: 25px;
-    height: 41px;
-    padding: 15px 10px 0px;
-}
-
-.button a {
-    color: white;
-    text-decoration: none;
 }
 
 .list-container {

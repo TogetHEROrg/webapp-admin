@@ -6,3 +6,7 @@
     padding: 20px;
     font-weight: bold;
 }
+.botones-posicion button {
+    background-color: #B3A920;
+    border-radius: 20px;
+}
