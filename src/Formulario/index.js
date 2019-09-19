@@ -10,14 +10,15 @@ export default class Formulario extends React.Component {
     // Auto initialize all the things!
     M.AutoInit();
   }
-  
+
 
   state = {
     nombre: "",
     apellido: "",
     dni: "",
     direccion: "",
-    email: ""
+    email: "",
+    telefono: ""
   };
 
   render() {
@@ -28,45 +29,77 @@ export default class Formulario extends React.Component {
           <form className="centrar-form col s12 hoverable">
             <div className="row">
               <div className="input-field col s6">
-              <i className="material-icons prefix">account_circle</i>
-                <input placeholder="Nombre" id="nombre" type="text"  className="validate" />
+                <i className="material-icons prefix">account_circle</i>
+                <input placeholder="Nombre" id="nombre" type="text" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="nombre">Nombre:</label>
               </div>
 
               <div className="input-field col s6">
+                <i className="material-icons prefix">account_box</i>
                 <input placeholder="Apellido" id="apellido" type="text" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="apellido">Apellido:</label>
               </div>
             </div>
             <div className="row">
               <div className="input-field col s6">
+                <i className="material-icons prefix">recent_actors</i>
                 <input placeholder="DNI" id="dni" type="text" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="dni">D.N.I:</label>
               </div>
 
               <div className="input-field col s6">
+                <i className="material-icons prefix">location_on</i>
                 <input placeholder="Direccion" id="direccion" type="text" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="direccion">Direccion:</label>
               </div>
             </div>
             <div className="row">
-              <div className="input-field col s12">
+              <div className="input-field col s6">
+                <i className="material-icons prefix">email</i>
                 <input placeholder="Email" id="email" type="email" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="email">Email</label>
                 <span class="helper-text" data-error="Error" data-success="Correcto">Ayuda</span>
               </div>
+              <div className="input-field col s6">
+                <i className="material-icons prefix">phone</i>
+                <input placeholder="Telefono" id="telefono" type="text" className="validate" />
+                <label className="blue-text text-darken-2" htmlFor="telefono">Telefono:</label>
+              </div>
             </div>
-            <div className="input-field col s4">
-              <select>
-                <option value="" disabled selected>Elige una opcion:</option>
-                <option value="1">Administrador</option>
-                <option value="2">Usuario</option>
-              </select>
+            <div className="row">
+              <div className="input-field col s4">
+                <i className="material-icons prefix">group</i>
+                <select>
+                  <option value="" disabled selected>Elige una opcion:</option>
+                  <option value="1">Defensoras Ambientales</option>
+                  <option value="2">Otras</option>
+                </select>
+              </div>
+
+              <div className="input-field col s4">
+                <span>
+                  <label>
+                    <input name="group1" type="radio" checked />
+                    <span>Usuario/a</span>
+                  </label>
+                </span>
+                <span>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Administrador/a</span>
+                  </label>
+                </span>
+              </div>
+
+              <div className="botones-posicion col s4">
+                <input type="button" className="btn" onClick={this.onSubmit} value="Agregar" />
+                <input type="button" className="btn" onClick={() => this.props.onCerrar()} value="Cerrar" />
+              </div>
             </div>
-            <div className="botones-posicion">
-              <input type="button" className="btn" onClick={this.onSubmit} value="Agregar" />
-              <input type="button" className="btn" onClick={() => this.props.onCerrar()} value="Cerrar" />
-            </div>
+
+
+
+
           </form>
         </div>
       </div>
