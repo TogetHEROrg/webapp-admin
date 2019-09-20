@@ -12,7 +12,6 @@ export default class Formulario extends React.Component {
    
   }
   
-
   state = {
     nombre: "",
     apellido: "",
@@ -26,7 +25,8 @@ export default class Formulario extends React.Component {
     return (
 
       <div className="row">
-        <div className="form-container col s10 lime lighten-3">
+        <div className="form-container col s11 z-depth-4 lime lighten-3 ">
+  
           <form className="col s12 hoverable">
             <div className="row">
               <div className="input-field col s6">
@@ -97,7 +97,7 @@ export default class Formulario extends React.Component {
               <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
               <i className="material-icons right">send</i>
               </button>
-              <button className="btn waves-effect waves-light" onClick={() => this.props.onCerrar()} value="Cerrar" name="action">Cerrar
+              <button className="btn waves-effect waves-light" onClick={this.handleClick} value="Cerrar" name="action">Cerrar
               <i className="material-icons right">close</i>
               </button>
               </div>
