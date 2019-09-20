@@ -4,7 +4,7 @@ import './styles.css';
 
 const Main = (props) => {
   return (
-    <div className="container imagen-fondo">
+    <div className="contenedor imagen-fondo">
       <div className="toolbar">
         <div className="text-container">
           <span className="title">TogetHERapp</span>
