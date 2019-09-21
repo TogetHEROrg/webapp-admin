@@ -18,14 +18,16 @@ export default class Formulario extends React.Component {
     dni: "",
     direccion: "",
     email: "",
-    telefono: ""
+    telefono: "",
+    modal:false
   };
+  
+  
 
   render() {
     return (
-
       <div className="row">
-        <div className="form-container col s11 z-depth-4 lime lighten-3 ">
+        <div className={`form-container scale-transition scale-in ${this.props.visible ? "scale-out" : ""} col s11 z-depth-4 lime lighten-3`}>
   
           <form className="col s12 hoverable">
             <div className="row">
@@ -97,7 +99,7 @@ export default class Formulario extends React.Component {
               <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
               <i className="material-icons right">send</i>
               </button>
-              <button className="btn waves-effect waves-light" onClick={this.handleClick} value="Cerrar" name="action">Cerrar
+              <button className="btn waves-effect waves-light" onClick={() => this.setState({ modal: false })} value="Cerrar" name="action">Cerrar
               <i className="material-icons right">close</i>
               </button>
               </div>
