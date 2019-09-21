@@ -19,7 +19,6 @@ export default class Formulario extends React.Component {
     direccion: "",
     email: "",
     telefono: "",
-    modal:false
   };
   
   
