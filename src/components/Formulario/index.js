@@ -9,9 +9,9 @@ export default class Formulario extends React.Component {
   componentDidMount() {
     // Auto initialize all the things!
     M.AutoInit();
-   
+
   }
-  
+
   state = {
     nombre: "",
     apellido: "",
@@ -20,14 +20,14 @@ export default class Formulario extends React.Component {
     email: "",
     telefono: "",
   };
-  
-  
+
+
 
   render() {
     return (
       <div className="row">
         <div className={`form-container scale-transition scale-in ${this.props.visible ? "scale-out" : ""} col s11 z-depth-4 lime lighten-3`}>
-  
+
           <form className="col s12 hoverable">
             <div className="row">
               <div className="input-field col s6">
@@ -64,7 +64,7 @@ export default class Formulario extends React.Component {
               </div>
               <div className="input-field col s6">
                 <i className="material-icons prefix">phone</i>
-                <input id="telefono" type="tel" maxLength="30" className="validate"/>
+                <input id="telefono" type="tel" maxLength="30" className="validate" />
                 <label className="blue-text text-darken-2" htmlFor="telefono">Telefono:</label>
                 <span className="helper-text" data-error="Error" data-success="Correcto"></span>
               </div>
@@ -95,12 +95,12 @@ export default class Formulario extends React.Component {
               </div>
 
               <div className="btn-check-posicion col s4">
-              <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
+                <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
               <i className="material-icons right">send</i>
-              </button>
-              <button className="btn waves-effect waves-light" onClick={() => this.setState({ modal: false })} value="Cerrar" name="action">Cerrar
+                </button>
+                <button className="btn waves-effect waves-light" onClick={() => this.setState({ modal: false })} value="Cerrar" name="action">Cerrar
               <i className="material-icons right">close</i>
-              </button>
+                </button>
               </div>
             </div>
           </form>

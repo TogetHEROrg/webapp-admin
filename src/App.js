@@ -1,38 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
-// Formulario
-import Formulario from './Formulario';
-
-import axios from 'axios';
-
-// Layouts
-import Main from './layouts/Main';
-
-// Components
-import CardAlert from './components/CardAlert'
+// Pages
+import MainPage from './pages/main';
+import LoginPage from './pages/login';
 
 const App = () => {
-  const [alertsData, setAlertsData] = useState(null);
-
-  useEffect(() => {
-    handleGetAlerts();
-  }, [])
-
-  const handleGetAlerts = () => {
-    axios.get('http://localhost:3001/alertas').then(res => {
-      setAlertsData(res.data)
-    })
-  }
-
-  return <div className="main">
-  <Formulario/>
-    <Main>
-      {
-        alertsData && alertsData.map(alert => <CardAlert data={alert} />)
-      }
-    </Main>
-  </div>
+  return <Router>
+    <Route path="/" exact component={MainPage} />
+    <Route path="/login" exact component={LoginPage} />
+  </Router>
 }
 
 export default App;
