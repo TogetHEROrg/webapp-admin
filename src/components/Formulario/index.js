@@ -26,7 +26,7 @@ export default class Formulario extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className={`form-container scale-transition scale-in ${this.props.visible ? "scale-out" : ""} col s11 z-depth-4 lime lighten-3`}>
+        <div className="form-container col s9 z-depth-4 lime lighten-3">
 
           <form className="col s12 hoverable">
             <div className="row">
