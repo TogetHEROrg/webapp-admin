@@ -10,18 +10,20 @@ body,
     width: 300px;
     height: 400px;
     background-color: rgba(221, 201, 201,0.38);
-    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.8);
-   
-
-}
-.centrar-imagen{
-    
-}
+  }
 .imagem-login{
     background-color: #fff;
     width: 300px;
     height: 400px;
-    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.8);
+
+}
+.centrar-imagen{
+    margin-top: 80px;
+}
+img{
+    height: 200px;
+    width: 100%;
+    
 }
 /*Root Container*/
 .root-container {
@@ -31,10 +33,9 @@ body,
     justify-content:center ;
     align-items: center;
     flex-direction: row;
-    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
-}
+   }
 
-.box-controller {
+/*.box-controller {
     visibility: visible;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -57,7 +58,7 @@ body,
     border-radius: 6px;
     padding: 24px;
 }
-
+*/
 
 /*Header*/
 .header {
@@ -95,7 +96,6 @@ body,
 .login-input {
     height: 2.1em;
     border-radius: 3px;
-    border: 1px solid $blue_theme;
     transition: border 0.4s ease-out;
     padding: 13px;
     font-family: Oxygen, sans-serif;
@@ -104,21 +104,18 @@ body,
     background: rgba(15, 15, 15, 0.01);
 }
 
-.login-input:hover {
-    border: 2px solid $blue_theme;
-}
 
 .login-input:focus {
     border: 2px solid #6565e7;
     box-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2);
 }
 
-/*Input Placeholder*/
+/*Input Placeholder
 .login-input::placeholder {
     font-family: Oxygen, sans-serif;
     font-size: 16px; //color: rgba(46, 213, 116, 0.839);
     color: rgba(15, 15, 15, 0.4);
-}
+}*/
 
 .button-login {
     background-color: #b3a920;
