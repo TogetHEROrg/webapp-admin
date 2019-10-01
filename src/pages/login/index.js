@@ -3,20 +3,20 @@ import './login.css';
 import logo from '../../img/fondo.svg'
 
 const LoginPage = (props) => {
-  return(
-  <div className="root-container">
+  return(  
     
+  <div className="root-container">
     <div className="imagem-login">
     <img className="centrar-imagen" src={logo}/>
     </div>  
     <div className="container-login">
         <div className="header">
-          Login Admin
+         <span className="ingresar">INGRESAR</span>
         </div>
         <div className="box">
 
           <div className="input-group">
-            <label htmlFor="username">Usuario</label>
+            <label className="login-label" htmlFor="username">Usuario</label>
             <input
               type="text"
               name="username"
@@ -25,7 +25,7 @@ const LoginPage = (props) => {
           </div>
 
           <div className="input-group">
-            <label htmlFor="password">Contraseña</label>
+            <label className="login-label" htmlFor="password">Contraseña</label>
             <input
               type="password"
               name="password"
@@ -33,11 +33,12 @@ const LoginPage = (props) => {
               placeholder="Contraseña"/>
           </div>
 
-          <button className="button-login" onClick={() => props.history.push('/')}>INGRESAR</button>
+          <button className="button-login" onClick={() => props.history.push('/')}>ACEPTAR</button>
         </div>
       </div>
 </div>
-  );
+  
+    );
   }
 
 
