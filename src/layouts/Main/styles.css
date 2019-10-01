@@ -31,13 +31,14 @@
 }
 
 .title {
+  font-family: 'Permanent Marker', cursive;
   color: black;
   font-size: 31px;
 }
 
 .sub-title {
   margin-top: 12px;
-  color: #939ba3;
+  color: #7e8081;
   font-size: 12px;
 }
 
