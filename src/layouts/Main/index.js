@@ -4,12 +4,18 @@ import './styles.css';
 // Components
 import Modal from '../../components/Modal';
 
+// imagen de fondo
+import logo from '../../img/fondo.svg'
+
 const Main = (props) => {
   const [open, setOpen] = useState(false);
 
   return (
     <Fragment>
-      <div className="contenedor imagen-fondo">
+      <div className="contenedor">
+      
+      <img className="imagen-fondo" src={logo}/>
+      
         <div className="toolbar">
           <div className="text-container">
             <span className="title">TogetHERapp</span>
