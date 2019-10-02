@@ -27,7 +27,6 @@ export default class Formulario extends React.Component {
     return (
       <div className="row">
         <div className="form-container col s9 z-depth-4 lime lighten-3">
-
           <form className="col s12 hoverable">
             <div className="row">
               <div className="input-field col s6">
