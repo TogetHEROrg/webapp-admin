@@ -14,7 +14,7 @@ const Main = (props) => {
     <Fragment>
       <div className="contenedor">
       
-      <img className="imagen-fondo" src={logo}/>
+      <img className="imagen-fondo" src={logo} alt="imagen de fondo"/>
       
         <div className="toolbar">
           <div className="text-container">
