@@ -1,11 +1,4 @@
-body{
-  width: 100%;
-  height: 100%;
-  padding: 2.5em 1.5em 1.5em 1.5em;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
-  
-}
+
 .input-field label{
     color: grey;
     padding: 10px;
