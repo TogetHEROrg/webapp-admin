@@ -43,7 +43,7 @@ export default class Formulario extends React.Component {
         <label className="blue-text text-darken-2" htmlFor="nombre">Nombre:</label>
         </div>
         <div className="input-field col s12 m6">
-        <i className="material-icons prefix">account_box</i>
+        <i className="material-icons prefix">account_circle</i>
         <input id="apellido" type="text" maxLength="25" className="validate" />
         <label className="blue-text text-darken-2" htmlFor="apellido">Apellido:</label>
         </div>
