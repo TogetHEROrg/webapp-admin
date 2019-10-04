@@ -1,11 +1,3 @@
-.form-container{
-    height: auto;
-    max-width: 700px;
-    }
-
-.form-style{
-    background-color: azure;
-}
 
 .btn-check-posicion button{
     background-color: #B3A920;
@@ -16,7 +8,10 @@
     justify-content: space-around;
 }
 
-@media (min-width: 375px){
+@media (max-width: 500px){
+    .check{
+        display: block;
+    }
     .row .col{
         padding: 10px !important;
     }
@@ -36,7 +31,7 @@
         font-size: 16px;
     }
     .size-span{
-        font-size: 12px !important;
+        font-size: 12px;
     }
     .btn {
         font-size: 13px !important;
@@ -45,7 +40,7 @@
         display: none;
     }
 }
-@media (min-width: 768px){
+@media (max-width: 768px){
     .card-panel{
         font-size: 12px;
     }

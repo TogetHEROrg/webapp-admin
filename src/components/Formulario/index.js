@@ -24,7 +24,7 @@ export default class Formulario extends React.Component {
 
   render() {
     return (
-      <div className="row">
+      <div className="row container">
       <div className="form-container col s12 lime lighten-3">
       
 
@@ -83,7 +83,7 @@ export default class Formulario extends React.Component {
                 </select>
               </div>
 
-              <div className="btn-check-posicion input-field col s12 m6">
+              <div className="btn-check-posicion check input-field col s12 m6">
                 <span>
                   <label>
                     <input name="group1" type="radio" checked />
