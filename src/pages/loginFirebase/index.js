@@ -9,7 +9,7 @@ const LoginFirebase = (props) => {
             <div className="row">
                 <div className="input-cart col s12 m12 l12 z-depth-2 grey lighten-5">
                     <div className="col s12 m6 centrar-imagen">
-                        <img src={logo} />
+                        <img src={logo} alt="logo plurales"/>
                     </div>
                     <div className="col s12 m6 login z-depth-4 hoverable">
                         <h4 className="center">Ingresar</h4>

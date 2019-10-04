@@ -1,6 +1,6 @@
 
 .input-field label{
-    color: grey;
+    color: black;
     padding: 10px;
     font-weight: 600;
 }
@@ -32,6 +32,9 @@
     border-radius: 20px;
     color: black;
     font-weight: 600;
+}
+.btn i{
+    color: black;
 }
 .centrar-imagen{
     margin-top: 75px;
