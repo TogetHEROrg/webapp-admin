@@ -31,8 +31,9 @@ export default class Formulario extends React.Component {
       <form className="form-style card-panel hoverable z-depth-5 col s12">
       <div className="col s12">
         
-      <div className="nav-wrapper z-depth-3">Nuevo Usuario:
-      <i class="material-icons">close</i>
+      <div className="card-panel"><p>Nuevo Usuario:
+      <i className="material-icons left">person_add</i>
+      </p>
       </div>
         
         </div>
@@ -86,13 +87,13 @@ export default class Formulario extends React.Component {
                 <span>
                   <label>
                     <input name="group1" type="radio" checked />
-                    <span>Usuario/a</span>
+                    <span className="size-span">Usuario/a</span>
                   </label>
                 </span>
                 <span>
                   <label>
                     <input name="group1" type="radio" />
-                    <span>Administrador/a</span>
+                    <span className="size-span">Administrador/a</span>
                   </label>
                 </span>
               </div>

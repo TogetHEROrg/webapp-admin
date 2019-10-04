@@ -12,7 +12,7 @@ const Main = (props) => {
 
   return (
     <Fragment>
-      <div className="contenedor">
+      <div className="contenedor card-panel grey lighten-5 z-depth-4">
       
       <img className="imagen-fondo" src={logo} alt="imagen de fondo"/>
       
@@ -21,8 +21,13 @@ const Main = (props) => {
             <span className="title">TogetHERapp</span>
             <span className="sub-title">Crear y administrar usuarios</span>
           </div>
-          <div>
-            <button onClick={() => setOpen(true)} className="button btn waves-effect waves-light" value="Crear" type="button" name="action">Crear Usuario
+          <div className="boton-mobile">
+            <button onClick={() => setOpen(true)} className="button btn-floating waves-effect waves-light" value="Crear" type="button" name="action">
+              <i className="material-icons right">add</i>
+            </button>
+          </div>
+          <div className="boton-desktop">
+            <button onClick={() => setOpen(true)} className="button btn waves-effect waves-light" value="Crear" type="button" name="action">Crear usuario
               <i className="material-icons right">add</i>
             </button>
           </div>
