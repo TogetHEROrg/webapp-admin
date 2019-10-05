@@ -37,5 +37,9 @@
     color: black;
 }
 .centrar-imagen{
-    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+}
+.centrar-imagen img{
+    width: 80%;
 }

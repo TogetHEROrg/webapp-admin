@@ -10,16 +10,30 @@ export default class Formulario extends React.Component {
     M.AutoInit();
 
   }
+constructor(props) {
+super(props);
 
-  state = {
+  this.state = {
     nombre: "",
     apellido: "",
     dni: "",
     direccion: "",
     email: "",
-    telefono: "",
+    telefono: ""
   };
 
+  this.handleChange= this.handleChange.bind(this);
+  this.handleSubmit=this.handleSubmit.bind(this);
+}
+
+  handleChange(event){
+this.setState({nombre: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert(this.state);
+    event.preventDefault();
+  }
 
 
   render() {
@@ -28,7 +42,7 @@ export default class Formulario extends React.Component {
       <div className="form-container col s12 lime lighten-3">
       
 
-      <form className="form-style card-panel hoverable z-depth-5 col s12">
+      <form className="form-style card-panel hoverable z-depth-5 col s12" onSubmit={this.handleSubmit} >
       <div className="col s12">
         
       <div className="card-panel"><p>Nuevo Usuario:
@@ -40,7 +54,9 @@ export default class Formulario extends React.Component {
       <div className="row">
         <div className="input-field col s12 m6">
         <i className="material-icons prefix">account_circle</i>
-        <input id="nombre" type="text" maxLength="25" className="validate" />
+        
+        <input id="nombre" type="text" maxLength="25" className="validate" value={this.state.nombre} name="nombre" onChange={this.handleChange}/>
+
         <label className="blue-text text-darken-2" htmlFor="nombre">Nombre:</label>
         </div>
         <div className="input-field col s12 m6">
@@ -99,9 +115,10 @@ export default class Formulario extends React.Component {
               </div>
 
               <div className="btn-check-posicion col s12 m6">
-                <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar
+
+         <input type="submit" value="Submit" />
               <i className="material-icons right">send</i>
-                </button>
+                
                 <button className="btn waves-effect waves-light" onClick={() => this.setState({ modal: false })} value="Cerrar" name="action">Cerrar
               <i className="material-icons right">close</i>
                 </button>
@@ -118,3 +135,4 @@ export default class Formulario extends React.Component {
   }
 }
 
+// <button className="btn waves-effect waves-light" onClick={this.onSubmit} value="Agregar" type="submit" name="action">Agregar

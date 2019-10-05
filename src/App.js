@@ -8,8 +8,8 @@ import LoginFirebase from './pages/loginFirebase';
 
 const App = () => {
   return <Router>
-    <Route path="/" exact component={MainPage} />
-    <Route path="/loginFirebase" exact component={LoginFirebase} />
+    <Route path="/MainPage" exact component={MainPage} />
+    <Route path="/" exact component={LoginFirebase} />
   </Router>
 }
 
