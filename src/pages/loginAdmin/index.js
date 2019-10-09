@@ -3,7 +3,7 @@ import './styles.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import logo from '../../img/fondo.svg'
 
-const LoginFirebase = (props) => {
+const LoginAdmin = (props) => {
     return (
         <div className="container">
             <div className="row">
@@ -42,4 +42,4 @@ const LoginFirebase = (props) => {
     );
 }
 
-export default LoginFirebase;
+export default LoginAdmin;

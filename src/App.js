@@ -4,12 +4,12 @@ import "./App.css";
 
 // Pages
 import MainPage from './pages/main';
-import LoginFirebase from './pages/loginFirebase';
+import LoginAdmin from './pages/loginAdmin';
 
 const App = () => {
   return <Router>
     <Route path="/MainPage" exact component={MainPage} />
-    <Route path="/" exact component={LoginFirebase} />
+    <Route path="/" exact component={LoginAdmin} />
   </Router>
 }
 
