@@ -4,6 +4,16 @@ import 'materialize-css/dist/css/materialize.min.css';
 import logo from '../../img/fondo.svg'
 import { withFormik, Form } from 'formik';
 import * as Yup from 'yup';
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import { firebaseConfig } from '../../firebaseConfig';
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const firebaseAppAuth = firebaseApp.auth(); const providers = {
+    emailProvider: new firebase.auth.EmailAuthProvider(),
+};
 
 const LoginAdmin = ({ handleChange, values, errors }) => {
     return (
@@ -52,7 +62,7 @@ const loginSchema = Yup.object().shape({
     password: Yup.string('Debe ingresar un valor').max(10, 'Maximo 10 letras').min(5, 'Minimo 5 letras')
 })
 
-export default withFormik({
+const loginFormComponent = withFormik({
     displayName: 'Login Form',
     mapPropsToValues: (props) => ({
         email: null,
@@ -61,7 +71,18 @@ export default withFormik({
     validateOnBlur: false,
     validateOnChange: false,
     validationSchema: loginSchema,
-    handleSubmit: (values) => {
-        console.log('VALORES: ', values)
+    handleSubmit: (values, { props }) => {
+        const { email, password } = values;
+        const { signInWithEmailAndPassword } = props;
+
+        signInWithEmailAndPassword(email, password)
+            .then(res => localStorage.setItem('access_token', res.user.uid))
+            .then(_ => window.location.replace('/admin'))
+            .catch(err => console.log(err))
     }
 })(LoginAdmin);
+
+export default withFirebaseAuth({
+    providers,
+    firebaseAppAuth,
+})(loginFormComponent);
