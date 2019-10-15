@@ -24,7 +24,7 @@ const LoginAdmin = ({ handleChange, values, errors }) => {
                         <img src={logo} alt="logo plurales" />
                     </div>
                     <div className="col s12 m6 login z-depth-4 hoverable">
-                        <h4 className="center">Ingresar</h4>
+                        <h4 className="center">Administrador</h4>
                         <br />
                         <Form>
                             <div className="input-field">
