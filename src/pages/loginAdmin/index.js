@@ -8,6 +8,7 @@ import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { firebaseConfig } from '../../firebaseConfig';
+import { async } from 'q';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -81,6 +82,8 @@ const loginFormComponent = withFormik({
             .catch(err => console.log(err))
     }
 })(LoginAdmin);
+
+// logOut 
 
 export default withFirebaseAuth({
     providers,
