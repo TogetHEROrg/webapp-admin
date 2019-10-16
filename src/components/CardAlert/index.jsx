@@ -17,6 +17,7 @@ const CardAlert = ({ data }) => {
         <span>{data.description}</span>
         <span>{format(data.date.toDate(), 'HH:mm:ss')}</span>
         <span>{format(data.date.toDate(), 'dd/MM/yyyy')}</span>
+        <span>{data.userEmail}</span>
       </div>
     </div>
   );
